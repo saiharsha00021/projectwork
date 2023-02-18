@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>calculator</title>
+    <style>
+          *{
+            padding: 0px;
+            margin: 0px;
+        }
+        body
+        {
+            width: 100vw;
+            height: 100vh;
+       
+            background-size: 100% 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #container{
+            width: 50vw;
+            height: 80vh;
+            background-color: rgba(0, 0, 0, 0.669);
+            border-radius: 2%;
+            box-shadow: -5px 5px 5px red;
+        }
+        #display{
+            width: 40%;
+            height: 30px;
+            position: absolute;
+            top: 15%;
+            left: 27%;
+            background-color: black;
+            color: white;
+            font-size: 25px;
+            padding: 5px;
+            outline: none;
+            border: groove 10px rgb(155, 155, 155); 
+            box-shadow: 2px 2px 5px black;
+        }
+        .a{
+            top: 15vh;
+            left: 5vh;
+            margin: 5px;
+            margin-top: 20px;
+            position: relative;
+            width: 15%;
+            height: 6vh;
+            background-color: black;
+            color: white;
+            font-size: 24px;
+            border-radius: 2px 2px 2px black;
+            border:2px solid white ;
+        }
+        #clear{
+            position: absolute;
+            bottom: 190px;
+            width: 12%;
+            height: 6vh;
+            font-size: 24px;
+            left: 28vw;
+            background-color: black;
+            color: white;
+            border: 2px solid white;
+            box-shadow: 2px 2px 2px black;
+        }
+        #equ{
+            position: absolute;
+            bottom: 190px;
+            width: 20%;
+            height: 6vh;
+            font-size: 24px;
+            left: 42vw;
+            background-color: black;
+            color: white;
+            border: 2px solid white;
+            border-radius: 5px;
+            box-shadow: 2px 2px 2px bl;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+    <form name="cform">
+        <input name="Ans" id="display">
+        <br>
+        <input type="button" class="a" value="1" onclick="cform.Ans.value += '1'">
+        <input type="button" class="a"value="2" onclick="cform.Ans.value += '2'">
+        <input type="button" class="a" value="3" onclick="cform.Ans.value += '3'">
+        <input type="button" class="a"value="+" onclick="cform.Ans.value += '+'">
+        <br>
+        <input type="button" class="a" value="4" onclick="cform.Ans.value += '4'">
+        <input type="button" class="a" value="5" onclick="cform.Ans.value += '5'">
+        <input type="button" class="a" value="6" onclick="cform.Ans.value += '6'">
+        <input type="button" class="a" value="-" onclick="cform.Ans.value += '-'">
+        <br>
+        <input type="button" class="a" value="7" onclick="cform.Ans.value += '7'">
+        <input type="button" class="a"value="8" onclick="cform.Ans.value += '8'">
+        <input type="button" class="a"value="9" onclick="cform.Ans.value += '9'">
+        <input type="button" class="a"value="*" onclick="cform.Ans.value += '*'">
+        <br>
+        <input type="button" class="a" value="%" onclick="cform.Ans.value += '%'">
+        <input type="button" class="a" value="0" onclick="cform.Ans.value += '0'">
+        <input type="button" class="a" value="." onclick="cform.Ans.value += '.'">
+        <input type="button" class="a" value="/" onclick="cform.Ans.value += '/'">
+        <br>
+        <input type="button" id="equ" value="=" onclick="cform.Ans.value = eval(cform.Ans.value)">
+        <input type="button" id="clear" value="C" onclick="cform.Ans.value ='  '">
+        <br>
+    </form>
+</div>
+<script>
+    function clicksound()
+    {
+        var clicksound=new audio()
+        clicksound.src="click.mp3"
+        clicksound.play()
+    }
+</script>
+    
+</body>
+</html>
